@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+</head>
+<style type="text/css">
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+</style>
+<body>
+
+<h1 style="">Articles</h1>
+
+<ul>
+    {% for article in articles %}
+    <a href="/article/{{article[0].rsplit('/', 1)[0]}}/{{article[0].rsplit('/', 1)[1]}}">
+    <li>{{article[1]}}</li>
+    </a>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
